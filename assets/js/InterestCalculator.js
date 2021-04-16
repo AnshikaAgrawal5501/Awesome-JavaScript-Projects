@@ -3,7 +3,12 @@ function calculate(){
      r=document.getElementById("r").value;
      t=document.getElementById("t").value;
     simpleInterest=document.getElementById("simpleInterest");
-    simpleInterest.innerHTML="The Simple Interest is"+" " + (p*r*t/100);
+    let si = (p*r*t)/100;
+    si=si.toFixed(2);
+    const amt = parseFloat(p) + parseFloat(si);
+    simpleInterest.innerHTML=`Simple Interest : <b>&dollar; ${si}</b>
+    <br>
+    Amount : <b>&dollar; ${amt}</b>`;
 }
 
 function reset(){
